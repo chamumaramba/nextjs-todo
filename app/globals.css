@@ -18,12 +18,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(rgb(92, 92, 207), rgb(143, 110, 48))
+  rgb(var(--background-start-rgb));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @layer utilities {
@@ -31,3 +29,34 @@ body {
     text-wrap: balance;
   }
 }
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.fixed-width-task {
+  width: 50%;
+}
+
+.fixed-width-due-date {
+  width: 30%;
+}
+
+.fixed-width-action {
+  width: 20%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-bg-color {
+  background-color: rgb(133, 110, 48)
+}
+
+
