@@ -39,10 +39,11 @@ export default function AddTaskForm({ onAddTask }) {
     <div className="flex justify-center items-center my-4">
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 px-2 justify-center mb-2 w-full max-w-xl bg-white bg-opacity-30 p-4 rounded-lg"
+        className="space-y-2 px-2 justify-center mb-2 w-full max-w-xl bg-white bg-opacity-30 p-4 rounded-lg"
       >
         <div className="flex flex-col sm:flex-row sm:space-x-4">
           <fieldset className="flex flex-col sm:flex-row items-center border border-gray-400 rounded px-2 py-2 flex-1 mb-4 sm:mb-0">
+            <legend className="text-sm font-bold">My To-Do</legend>
             <label htmlFor="task" className="sr-only">Task Description</label>
             <input
               type="text"
@@ -52,7 +53,7 @@ export default function AddTaskForm({ onAddTask }) {
               required
               value={formData.task}
               onChange={handleChange}
-              className="flex-1 mr-2 px-2 py-1 bg-gray-300 rounded w-full sm:w-auto"
+              className="flex-1 mr-2 px-2 py-1 mt-2 text-sm bg-gray-300 rounded w-full sm:w-auto"
             />
 
             <label htmlFor="due_date" className="sr-only">Due Date</label>
@@ -63,12 +64,12 @@ export default function AddTaskForm({ onAddTask }) {
               required
               value={formData.due_date}
               onChange={handleChange}
-              className="flex-1 mr-2 px-2 py-1 bg-gray-300 rounded w-full sm:w-auto"
+              className="flex-1 mr-2 px-2 py-1 mt-2 text-sm bg-gray-300 rounded w-full sm:w-auto"
             />
             <Button  
             type='submit' 
-            startContent={<FiPlus className="w-5 h-5"/>}
-            className="bg-green-600 p-2 hover:bg-green-400 m-3 rounded-md text-white shadow-lg flex items-center justify-center">
+            startContent={<FiPlus className="w-4 h-4"/>}
+            className="bg-green-600 p-2 hover:bg-green-400 m-3 rounded-md text-sm text-white shadow-lg flex items-center justify-center">
             Add Task
           </Button>
           </fieldset>

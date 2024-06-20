@@ -1,4 +1,3 @@
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
@@ -16,17 +15,13 @@ export default async function RootLayout({ children }) {
   const session = await getSession();
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div>
-          <Navbar session={session} />
-          <div className="content">
-            {children}
-          </div>
-          <Footer className='m-4'/>
-        </div>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Navbar session={session} />
+        <main className="flex-grow">
+          {children}
+        </main>
+        {/* <Footer className="fixed bottom-0 left-0 w-full flex-shrink-0" /> */}
       </body>
     </html>
   );
 }
-
-

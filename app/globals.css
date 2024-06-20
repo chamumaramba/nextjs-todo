@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(rgb(92, 92, 207), rgb(143, 110, 48))

@@ -40,11 +40,11 @@ export default function EditTask({ task, onUpdateTask }) {
   return (
     <div className="flex w-full">
       <button onClick={() => setShowModal(true)} className="text-blue-600 hover:text-blue-400">
-        <FiEdit className="w-5 h-5" />
+        <FiEdit className="w-4 h-4" />
       </button>
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-600 bg-opacity-50">
-          <div className="bg-gray-400 rounded-lg p-6 w-full max-w-md relative">
+          <div className="bg-gray-400 rounded-lg p-6 w-full max-w-md mx-4 sm:mx-6 md:mx-8 lg:mx-10 relative">
             <span
               className="close text-black text-xl leading-none hover:text-gray-600 cursor-pointer absolute top-2 right-2"
               onClick={() => setShowModal(false)}
@@ -52,10 +52,10 @@ export default function EditTask({ task, onUpdateTask }) {
               &times;
             </span>
             <form onSubmit={handleSubmit}>
-              <h2 className="text-center mb-2 font-bold">Edit Task</h2>
-              <input type="hidden" name="id" value={task.id} />
+              <h2 className="text-center mb-2 font-bold text-xs sm:text-sm ">Edit Task</h2>
+              <input type="hidden" name="id" value={task.id} className="text-xs sm:text-sm " />
               <div className="input-container mb-4">
-                <label htmlFor="task" className="block mb-2 text-left">
+                <label htmlFor="task" className="block mb-2 text-left text-xs sm:text-sm ">
                   Task
                 </label>
                 <input
@@ -63,11 +63,11 @@ export default function EditTask({ task, onUpdateTask }) {
                   name="task"
                   value={formData.task}
                   onChange={handleChange}
-                  className="input-field bg-gray-500 border border-gray-300 p-2 w-full rounded"
+                  className="text-xs sm:text-sm  input-field bg-gray-500 border border-gray-300 p-2 w-full rounded"
                 />
               </div>
               <div className="input-container mb-4">
-                <label htmlFor="due_date" className="block mb-2 text-left">
+                <label htmlFor="due_date" className="block mb-2 text-left text-xs sm:text-sm ">
                   Due Date
                 </label>
                 <input
@@ -75,13 +75,13 @@ export default function EditTask({ task, onUpdateTask }) {
                   name="due_date"
                   value={formData.due_date}
                   onChange={handleChange}
-                  className="input-field bg-gray-500 border border-gray-300 p-2 w-full rounded"
+                  className="text-xs sm:text-sm  input-field bg-gray-500 border border-gray-300 p-2 w-full rounded"
                 />
               </div>
               <div className="flex justify-center">
                 <Button
                   type="submit"
-                  className="bg-green-400 p-2 hover:bg-green-600 text-white shadow-lg flex items-center justify-center"
+                  className="bg-green-400 p-2 hover:bg-green-600 text-white shadow-lg flex items-center justify-center text-xs sm:text-sm "
                 >
                   Update Task
                 </Button>

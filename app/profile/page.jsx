@@ -81,9 +81,8 @@ export default function Profile() {
 
   return (
     <main className="login-container h-screen" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '85vh' }}>
-      <div className="max-w-2xl w-full">
+      <div style={{ width: '80%', maxWidth: '800px', padding: '10px', margin: '20px 0', borderRadius: '10px', backgroundColor: 'rgba(255, 255, 255, 0.3)' }}>
         <div className="text-center mb-2">
-          <h1 className="text-xl font-bold p-2">My To Do List</h1>
           <AddTaskForm onAddTask={handleAddTask} />
           <TaskTable tasks={task} onDeleteTask={handleDeleteTask} onUpdateTask={handleUpdateTask} />
         </div>
