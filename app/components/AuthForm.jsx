@@ -10,7 +10,7 @@ export default function AuthForm(){
         view="magic_link"
         showLinks={false}
         providers={[]}
-        redirectTo='https://nextjs-todo-9ynxx7lig-chamumarambas-projects.vercel.app/auth/confirm'
+        redirectTo='https://nextjs-todo-flhd.vercel.app/auth/confirm'
         appearance={{
             theme: 'light',
             Button: {
