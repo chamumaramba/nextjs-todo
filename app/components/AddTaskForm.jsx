@@ -63,6 +63,7 @@ export default function AddTaskForm({ onAddTask }) {
               name="due_date"
               required
               value={formData.due_date}
+              placeholder="yyyy/mm/dd"
               onChange={handleChange}
               className="flex-1 mr-2 px-2 py-1 mt-2 text-sm bg-gray-300 rounded w-full sm:w-auto"
             />

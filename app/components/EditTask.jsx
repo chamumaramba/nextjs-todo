@@ -37,6 +37,10 @@ export default function EditTask({ task, onUpdateTask }) {
     }
   };
 
+  const form = new FormData();
+    form.append('task', formData.task);
+    form.append('due_date', formData.due_date);
+
   return (
     <div className="flex w-full">
       <button onClick={() => setShowModal(true)} className="text-blue-600 hover:text-blue-400">
