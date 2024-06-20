@@ -2,10 +2,9 @@
 'use client'
 import { useState, useEffect } from 'react';
 import AddTaskForm from '../components/AddTaskForm';
-import TaskTable from '../components/TaskTable'; // Adjust to your actual TaskTable component path
-import { deleteTask } from '../actions/deleteTask'; // Ensure this is adjusted to your actual file structure
-import { updateTask } from '../actions/updateTask'; // Import your updateTask function
-
+import TaskTable from '../components/TaskTable'; 
+import { deleteTask } from '../actions/deleteTask'; 
+import { updateTask } from '../actions/updateTask'; 
 export default function Profile() {
   const [user, setUser] = useState(null);
   const [task, setTasks] = useState([]);
@@ -13,7 +12,7 @@ export default function Profile() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/api/get-data'); // Adjust your API endpoint
+        const response = await fetch('/api/get-data'); 
         const { session, task } = await response.json();
 
         if (session) {

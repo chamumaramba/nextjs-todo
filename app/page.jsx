@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react';
 import { Button } from '@nextui-org/react';
-import AuthForm from './components/AuthForm'; // Import your AuthForm component
+import AuthForm from './components/AuthForm'; 
 
 const Home = () => {
-  const [showAuthForm, setShowAuthForm] = useState(false); // State to manage the visibility of AuthForm
+  const [showAuthForm, setShowAuthForm] = useState(false); 
 
   // Function to toggle the visibility of AuthForm
   const toggleAuthForm = () => {

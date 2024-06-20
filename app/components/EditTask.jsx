@@ -33,7 +33,7 @@ export default function EditTask({ task, onUpdateTask }) {
       setShowModal(false);
     } else {
       console.error('Error updating task:', response.error);
-      // Handle error state if needed
+     
     }
   };
 

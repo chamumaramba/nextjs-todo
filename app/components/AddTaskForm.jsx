@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { addTask } from '../actions/addTask'; // Adjust the import path as needed
+import { addTask } from '../actions/addTask'; 
 import { Button } from '@nextui-org/react';
 import { FiPlus } from 'react-icons/fi';
 

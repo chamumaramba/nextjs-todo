@@ -1,6 +1,6 @@
 // app/actions/GetData.js
-import { createClient } from '@supabase/supabase-js'; // Adjust based on your Supabase client import
-import { getSession } from '@/lib/session'; // Adjust based on your session management setup
+import { createClient } from '@supabase/supabase-js';
+import { getSession } from '@/lib/session'; 
 
 export async function GetData() {
   const session = await getSession();
@@ -13,7 +13,7 @@ export async function GetData() {
   const { data: tasks, error } = await supabase
     .from('task')
     .select('*')
-    .eq('user_id', session.user.id) // Adjust 'user_id' based on your schema
+    .eq('user_id', session.user.id) 
     .order('date_created', { ascending: true });
 
   if (error) {
